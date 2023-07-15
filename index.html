@@ -7,7 +7,7 @@
     <meta name="description" content="This page contains all the things I am learning how to create as I learn HTML.">
     <title>My First Web Page</title>
     <link rel="icon" href="html5.png" type="image/x-icon">
-    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 
 <body>
@@ -61,24 +61,52 @@
                 </aside>
                 <br>
                 <table>
+                    <caption><strong>My Daily Schedule</strong></caption>
+                    <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Activity</th>
+                    </tr>
+                    </thead>
+                    <tbody>
                   <tr>
+                    <th id="morning" scope="row">Morning</th>
                     <td>
-                      <time datetime="08:00am">8am</time> - <time datetime="11:00am">11am<time>
+                      <time datetime="08:00">8am</time> - <time datetime="11:00">11am</time>
                     </td>
                     <td>Write Code</td>
                   </tr>
                   <tr>
+                    <th id="noon" scope="row">Noon</th>
                     <td>
-                      <time datetime="11:00am">11am</time> - <time datetime="12:00pm">12pm<time>
+                      <time datetime="11:00">11am</time> - <time datetime="12:00">12pm</time>
                     </td>
                     <td>Eat Lunch</td>
                   </tr>
                   <tr>
+                    <th id="afternoon" scope="row">Afternoon</th>
                     <td>
-                      <time datetime="12:00pm">12pm</time> - <time datetime="17:00pm">5pm<time>
+                      <time datetime="12:00">12pm</time> - <time datetime="17:00">5pm</time>
                     </td>
                     <td>Study for Other Courses</td>
                   </tr>
+                  <tr>
+                    <th id="evening" scope="row">Evening</th>
+                    <td rowspan="2">All Other Times</td>
+                    <td>Free Time</td>
+                  </tr>
+                  <tr>
+                    <th id="night" scope="row">Night</th>
+                    <td>Sleep</td>
+                  </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                        <td colspan="3">And that's what I do every day, 5 days a week. Just east, sleep, code ..and repeat!</td>
+                    </tr>
+                    </tfoot>
+
                 </table>
             </section>
         </article>
@@ -135,6 +163,57 @@
                 </dl>
             </section>
         </article>
+        <hr>
+
+<article id="contact">
+    <h2>Contact Me</h2>
+    <p>I'd really like to hear from you!</p>
+
+    <form action="https://httpbin.org/get" method="get">
+        <p>
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" id="firstName" placeholder="Jane" autocomplete="on" required autofocus>
+        </p>
+
+        <p>
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName" id="lastName" placeholder="Doe" autocomplete="on" required>
+        </p>
+
+        <p>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Keep it secret, keep it safe!" required>
+        </p>
+
+        <p>
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" id="phone" placeholder="+1 (xxx)-(xxx)-(xxxx)" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        </p>
+
+        <p>
+            <label for="decade">decade:</label>
+            <input type="number" name="decade" id="decade" min="1950" max="2020" step="10" value="1980">
+        </p>
+        <p>
+            <label for="coffee">Favorite Coffee:</label>
+            <select name="coffee" id="coffee" multiple size="5">
+                <optgroup label="Coffees">
+                <option value="regular coffee">Regular Coffee</option>
+                <option value="iced coffee" selected>Iced Coffee</option>
+                </optgroup>
+                <optgroup label="Espresso Drinks">
+                <option value="latte">Latte</option>
+                <option value="cappuccino">Cappuccino</option>
+                <option value="cortado">Cortado</option>
+                <option value="americano">Americano</option>
+                </optgroup>
+                <option value="Other">Other</option>
+            </select>
+        </p>
+    </form>
+</article>
+
+
     </main>
     <hr>
     <footer>
